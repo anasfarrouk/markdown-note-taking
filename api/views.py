@@ -1,8 +1,10 @@
 from    django.shortcuts            import  render
 from    rest_framework.generics     import  CreateAPIView,ListAPIView,RetrieveAPIView
 from    rest_framework.permissions  import  IsAuthenticated
+from    rest_framework.response      import  Response
 from    .serializers                import  NoteSerializer,NoteGETSerializer
 from    .models                     import  Note
+from    markdown                    import  markdown
 
 # Create your views here.
 class   CreateNoteView(CreateAPIView):
@@ -26,4 +28,11 @@ class   RetrieveNoteView(RetrieveAPIView):
 
     def get_queryset(self):
         return  Note.objects.filter(owner=self.request.user)
+
+    def retrieve(self,request,*args,**kwargs):
+        note    =   self.get_object()
+        file    =   note.upload
+        text    =   file.read().decode('utf-8')
+        html    =   markdown(text)
+        return  Response({'html':html})
 
