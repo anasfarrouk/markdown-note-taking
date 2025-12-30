@@ -2,8 +2,8 @@
 
 This is a markdown note taking api. You can authenticate, upload your .md files, list all files, and access the html rendered version of your files.
 
-## Installation
-This project uses:
+## Requirements
+This project requires:
 - Django    5.2.8
 - Python    3.13.11
 - DRF       3.16.1
@@ -19,11 +19,8 @@ This project uses:
 ## Contributing
 All contributions are welcomed.
 
-## Author
-Anas Farrouk
-
 ## License
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
 ## Project status
-This project isn't being maintened by the initial developer.
+This project isn't being maintened.
