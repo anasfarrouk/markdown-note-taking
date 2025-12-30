@@ -20,7 +20,7 @@ This project requires:
 All contributions are welcomed.
 
 ## License
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU Affero General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
 ## Project status
 This project isn't being maintened.
